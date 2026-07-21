@@ -15,7 +15,7 @@ If AI was used for this learning-log-required problem, also complete `ai_reflect
 OJ problem number/title:
 
 ```text
-2996
+2996/Letter Swap
 ```
 
 OJ submission ID, if submitted:
@@ -40,6 +40,15 @@ Choose one:
 
 ```text
 0-15 minutes
+15-30 minutes
+30-60 minutes
+1-3 hours
+3-6 hours
+6-24 hours
+1-3 days
+4-7 days
+1-4 weeks
+More than 4 weeks
 ```
 
 How to count this time:
