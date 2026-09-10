@@ -21,7 +21,7 @@ OJ problem number/title:
 OJ submission ID, if submitted:
 
 ```text
-602156
+603026
 ```
 
 OJ status:
@@ -33,7 +33,7 @@ Pass
 Independent time spent on this problem:
 
 ```text
-1-4 weeks
+4-7 days
 ```
 
 Choose one:
@@ -73,16 +73,25 @@ Also explain the input, output, and important constraints.
 If you do not fully understand the problem yet, write what you currently understand. Your understanding may be incomplete or incorrect, but you must make a genuine attempt.
 
 ```text
-The input is two integers S and N (area expansion rate per second, and number of queries), followed by N pairs of integers Xi, Yi (house coordinates), and the output is N integers — the second at which each house gets flooded
+The input gives two integers, S and N. S is the area that gets flooded each second, and N is the number of houses.
 
-use pi = 3.1416
+For each house, we get its coordinates (Xi, Yi).
 
-for each house:
-distance squared from origin = Xi^2 + Yi^2
-area the ink needs to cover = pi * (Xi^2 + Yi^2)
-time (seconds) = area / S
+First, calculate the distance from the origin:
 
-if the time isn't a whole number, round up to the next second (1.32 -> 2)
+Xi**2 + Yi**2
+
+Then use this to find the area needed to reach the house:
+
+area = 3.1416 * (Xi**2 + Yi**2)
+
+Next, divide the area by S to get the time:
+
+time = area / S
+
+If the answer is a decimal, round it up to the next whole number. For example, 1.32 becomes 2.
+
+Finally, print the time for each house.
 ```
 
 ---
@@ -102,13 +111,11 @@ This can be rough. It may be incomplete or different from your final solution.
 You may write pseudocode, a flowchart idea, or step-by-step thinking.
 
 ```text
-1. Read S and N from the first line
-2. Loop N times, each time read Xi and Yi
-3. For each (Xi, Yi):
-   Compute r2 = Xi*Xi + Yi*Yi
-   Compute t = 3.1416 * r2 / S
-   Round t up to the nearest integer
-4. Print the rounded-up integer answer
+1. Get S and the number of houses N.
+2. Repeat it N times, each time it'll read Xi and Yi
+3. Calculate X**2 + Y**2, then use it to find the time:
+t = (3.1416 * (X**2 + Y**2)) / S
+4. Print the rounded up integer result
 ```
 
 ---
@@ -128,7 +135,7 @@ Do not copy AI's explanation.
 Do not copy another person's explanation.
 
 ```text
-I use the 1st plan because it work perfect no problem
+It is the same as my first plan, since it works fine.
 ```
 
 ---
